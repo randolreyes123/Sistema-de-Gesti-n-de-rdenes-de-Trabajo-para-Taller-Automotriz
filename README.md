@@ -12,9 +12,9 @@ Diseñar la base de un sistema que permita registrar clientes y vehículos, crea
 
 ## Usuarios principales
 
-- Recepcionista: registra clientes, vehículos y órdenes de trabajo.
-- Técnico: documenta diagnósticos, observaciones y reparaciones recomendadas.
-- Encargado del taller: consulta el estado del trabajo, costos e historial del vehículo.
+- **Recepcionista:** registra clientes, vehículos y órdenes de trabajo.
+- **Técnico:** documenta diagnósticos, observaciones y reparaciones recomendadas.
+- **Encargado del taller:** consulta el estado del trabajo, costos e historial del vehículo.
 
 ## Funcionalidades principales
 
@@ -57,25 +57,35 @@ Frontend y backend se comunicarían mediante una **API**, utilizando solicitudes
 
 ## Herramientas utilizadas
 
-- Git y GitHub para control de versiones y repositorio.
-- GitHub Issues para registrar tareas, riesgos, mejoras y criterios de aceptación.
-- GitHub Projects para organizar el seguimiento mediante Kanban.
-- Visual Paradigm Online para el modelado UML.
-- Markdown para la documentación técnica del repositorio.
+- **Git y GitHub:** control de versiones y repositorio.
+- **GitHub Issues:** tareas, requisitos, criterios de aceptación y seguimiento.
+- **GitHub Projects:** organización del avance mediante tablero Kanban.
+- **Visual Paradigm Online:** modelado UML.
+- **Markdown:** documentación técnica del repositorio.
 
 ## Gestión del proyecto
 
-Se utilizó un enfoque ágil basado en **Kanban**. El tablero se organizó con los estados:
+Se utilizó un enfoque ágil basado en **Kanban**. Para el cierre de la Semana VIII, el tablero utiliza los estados:
 
-`Backlog | Por hacer | En progreso | En revisión | Finalizado`
+`Reserva | Listo | En curso | En revisión | Hecho`
 
-Los Issues documentan prioridad, responsable o rol, fecha estimada, requisito relacionado y criterio de aceptación.
+### Estado actual del tablero - 13/10/2026
+
+| Estado | Issues |
+|---|---|
+| **Hecho** | #1 Diseñar registro de clientes; #7 Definición de arquitectura inicial |
+| **Listo** | #2 Diseñar registro de vehículos; #3 Crear módulo de órdenes de trabajo |
+| **En curso** | Sin elementos |
+| **En revisión** | Sin elementos |
+| **Reserva** | #4, #5, #6, #8, #9 y #10 |
+
+Los Issues conservan además el estado que tenían documentado durante la Semana VI, de forma que pueda observarse la evolución del seguimiento sin perder la referencia histórica.
 
 ## Estado actual del proyecto
 
 La versión actual corresponde a una **línea base académica 0.1**. El proyecto cuenta con requisitos, historias de usuario, criterios de aceptación, modelos UML, arquitectura por capas, Issues y seguimiento mediante GitHub Projects.
 
-No se presenta como una aplicación terminada. La implementación completa de los módulos, las validaciones y las pruebas funcionales e integración quedan como trabajo de la siguiente etapa.
+No se presenta como una aplicación terminada. La implementación completa de los módulos, las validaciones y las pruebas funcionales e integración quedan como trabajo de una siguiente etapa.
 
 ## Registro breve de cambios y avances
 
@@ -84,13 +94,14 @@ No se presenta como una aplicación terminada. La implementación completa de lo
 3. Se elaboraron modelos UML para representar funciones, estructura y comportamiento del sistema.
 4. Se definió una arquitectura por capas con separación entre frontend, backend, lógica de negocio y persistencia.
 5. Se consolidó el seguimiento del proyecto mediante 10 Issues y un tablero Kanban en GitHub Projects.
+6. Para el cierre de la Semana VIII se revisaron los Issues, se documentó su estado actual y se sincronizó la documentación del repositorio con el tablero real.
 
 ## Issues seleccionados para seguimiento técnico
 
-- **#3 - Crear módulo de órdenes de trabajo:** módulo central del sistema; estado documentado: En progreso.
-- **#6 - Crear historial de servicios:** mejora funcional pendiente; estado documentado: Backlog.
-- **#9 - Implementar validaciones de datos del sistema:** reduce el riesgo de datos incompletos, duplicados o inválidos; estado documentado: Por hacer.
-- **#10 - Realizar pruebas funcionales e integración:** necesario para verificar que los módulos funcionen correctamente en conjunto; estado documentado: Por hacer.
+- **#3 - Crear módulo de órdenes de trabajo:** prioridad alta; estado actual **Listo**. Es el siguiente módulo central preparado para iniciar desarrollo.
+- **#6 - Crear historial de servicios:** prioridad media; estado actual **Reserva**. Depende de la persistencia correcta de las órdenes y vehículos.
+- **#9 - Implementar validaciones de datos del sistema:** prioridad alta; estado actual **Reserva**. Reduce el riesgo de datos incompletos, duplicados o inválidos.
+- **#10 - Realizar pruebas funcionales e integración:** prioridad media; estado actual **Reserva**. Permitirá verificar el funcionamiento individual y conjunto de los módulos.
 
 ## Nota técnica de versión
 
@@ -98,11 +109,11 @@ No se presenta como una aplicación terminada. La implementación completa de lo
 
 **Contenido:** requisitos, historias de usuario, criterios de aceptación, modelos UML, arquitectura por capas, documentación del proyecto, 10 Issues y tablero de seguimiento.
 
-**Cambios controlados:** definición del alcance, consolidación de requisitos, modelado del sistema, decisión arquitectónica y organización del seguimiento técnico.
+**Cambios controlados:** definición del alcance, consolidación de requisitos, modelado del sistema, decisión arquitectónica, organización del seguimiento técnico y actualización documental de cierre.
 
 **Pendientes:** implementación de los módulos priorizados, validaciones de datos, pruebas funcionales e integración, y fortalecimiento del historial de commits asociado a cada Issue.
 
-**Próximo paso técnico:** comenzar la implementación del módulo de órdenes de trabajo y relacionar cada cambio de código con su Issue, commit y prueba correspondiente.
+**Próximo paso técnico:** pasar el Issue **#3 - Crear módulo de órdenes de trabajo** de **Listo** a **En curso** cuando comience su implementación y relacionar cada cambio de código con su Issue, commit y prueba correspondiente.
 
 ## Documentación del repositorio
 
