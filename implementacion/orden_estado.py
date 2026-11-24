@@ -42,28 +42,28 @@ class EstadoOrden:
 
 class Recepcion(EstadoOrden):
     def siguiente(self, orden):
-        if not all((orden.numero.strip(), orden.cliente_id.strip(), orden.vehiculo_id.strip())):
+        if not all(isinstance(v, str) and v.strip() for v in (orden.numero, orden.cliente_id, orden.vehiculo_id)):
             raise TransicionInvalida("La orden requiere número, cliente y vehículo")
         return Estado.DIAGNOSTICO
 
 
 class Diagnostico(EstadoOrden):
     def siguiente(self, orden):
-        if not orden.diagnostico.strip():
+        if not isinstance(orden.diagnostico, str) or not orden.diagnostico.strip():
             raise TransicionInvalida("Debe registrar el diagnóstico")
         return Estado.ESPERANDO_APROBACION
 
 
 class EsperandoAprobacion(EstadoOrden):
     def siguiente(self, orden):
-        if not orden.aprobada:
+        if orden.aprobada is not True:
             raise TransicionInvalida("Falta aprobación del trabajo")
         return Estado.EN_REPARACION
 
 
 class EnReparacion(EstadoOrden):
     def siguiente(self, orden):
-        if not orden.reparacion_registrada:
+        if orden.reparacion_registrada is not True:
             raise TransicionInvalida("Debe registrar la reparación")
         return Estado.TERMINADO
 
